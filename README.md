@@ -28,4 +28,8 @@ Yêu cầu Python 3.12 (đã kiểm tra với 3.12.10); cài thư viện bằng 
 Lưu ý: `--seed` phải được áp dụng trước khi import các module khác (các default như `seed=SEED`
 gắn lúc import), nên `cli.main` gọi `config.set_seed` rồi mới import `pipeline`.
 
-Hình: `viz/merged.py` vẽ các hình ghép từ `output/results/*.csv`. Hình 7, 8, 10 của report (`merged_heterogeneity`, `merged_investigation`, `merged_commitment`) được vẽ sẵn ở đúng độ rộng in 160 mm, nên chèn vào LaTeX với `width=\textwidth` là kích thước 1:1.
+Hình: `viz/merged.py` vẽ các hình ghép (kích thước khổ rộng 183 mm) từ `output/results/*.csv`. Các hình 3, 4, 7, 8, 9, 10 của report được vẽ lại ở đúng độ rộng in 160 mm bằng `viz/report_figures.py`, nên chèn vào LaTeX với `width=\textwidth` là kích thước 1:1:
+
+    python -m ev_pipeline.viz.report_figures output/results output/figures
+
+Lệnh này ghi `fig3`, `fig4`, `fig7`, `fig8`, `fig9`, `fig10` (`.png` và `.pdf`) vào `output/figures/`; các hình này cần các file `figure_*.csv`, `zone_failure_*.csv`, `ablation_steps.csv` và `cluster_profiles.csv` trong `output/results/`.
