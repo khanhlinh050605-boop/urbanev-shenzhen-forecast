@@ -1,0 +1,12 @@
+# Python 3.12.10
+cnsplots==0.8.0
+lightgbm==4.7.0
+matplotlib==3.11.2
+numpy==2.4.6
+pandas==2.3.3
+pyproj==3.8.0
+pyshp==3.1.6
+scikit-learn==1.9.1
+scipy==1.18.1
+statsmodels==0.15.0
+xgboost==3.4.1
